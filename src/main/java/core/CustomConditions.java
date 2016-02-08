@@ -28,40 +28,6 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<List<WebElement>> textsOf(final List<WebElement> elements, final String... texts) {
-        return new ExpectedCondition<List<WebElement>>() {
-            private int listSize;
-            private String[] actualTexts;
-
-            public List<WebElement> apply(WebDriver driver) {
-                listSize = elements.size();
-                actualTexts = new String[elements.size()];
-
-                for (int i = 0; i < listSize; i++) {
-                    actualTexts[i]=(elements.get(i).getText());
-                }
-
-                if (listSize!=texts.length){
-                    return null;
-                }
-
-                else {
-                    for (int i = 0; i < listSize; i++) {
-                        String actualText = actualTexts[i];
-                        if (!actualText.contains(texts[i])) {
-                            return null;
-                        }
-                    }
-                    return elements;
-                }
-            }
-
-            public String toString(){
-                return String.format("Expected texts: %s,\nActual texts: %s", Arrays.toString(texts), Arrays.toString(actualTexts));
-            }
-        };
-    }
-
     public static ExpectedCondition<List<WebElement>> textsOf(final By elementsLocator, final String... texts) {
         return new ExpectedCondition<List<WebElement>>() {
             private int listSize;
@@ -134,7 +100,7 @@ public class CustomConditions{
                 }
             }
 
-            public  String toString(){
+            public String toString(){
                 return String.format("Actual texts: %s. Expected texts: %s", visibleElements, texts);
             }
 
