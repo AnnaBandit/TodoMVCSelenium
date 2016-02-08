@@ -1,7 +1,6 @@
 package core;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -43,6 +42,10 @@ public class ConsiseAPI<T> {
         return assertThat(visibilityOf(element));
     }
 
+    public static WebElement $(ExpectedCondition<WebElement> conditionToWaitParentElement, String innerElementCssSelector){
+        return assertThat(conditionToWaitParentElement).findElement(byCss(innerElementCssSelector));
+    }
+
     public static List<WebElement> $$(String cssSelector){
         return $$(byCss(cssSelector));
     }
@@ -65,33 +68,6 @@ public class ConsiseAPI<T> {
 
     public static String title(){
         return driver.getTitle();
-    }
-
-    public static List<WebElement> visibleTasks(List<WebElement> elements){
-        List<WebElement> visibleElements = null;
-        for (WebElement element: elements){
-            if (element.isDisplayed()){
-                visibleElements.add(element);
-            }
-        }
-
-        return elements;
-    }
-
-    public static WebElement $(ExpectedCondition<WebElement> conditionToWaitParentElement, String innerElementCssSelector){
-        return assertThat(conditionToWaitParentElement).findElement(byCss(innerElementCssSelector));
-    }
-
-    public static WebElement $(List<WebElement> elements, String cssSelector){
-        for (WebElement element: elements) {
-            try {
-                return element.findElement(byCss(cssSelector));
-            } catch (NoSuchElementException ex){
-                return null;
-            }
-        }
-        return null;
-
     }
 
 }

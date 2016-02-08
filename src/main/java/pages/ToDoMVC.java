@@ -10,7 +10,6 @@ import static core.CustomConditions.*;
 
 public class ToDoMVC {
     public static By tasksList = byCss("#todo-list li");
-    public static By activeTasks = byCss("#todo-list li.active");
 
     public static void add(String... tasksTexts){
         for(String taskText: tasksTexts){
@@ -19,11 +18,11 @@ public class ToDoMVC {
     }
 
     public static void assertVisibleTasks(String... tasksTexts){
-        assertThat(visibleTextsOf($$(activeTasks), tasksTexts));
+        assertThat(visibleTextsOf($$(tasksList), tasksTexts));
     }
 
     public static void assertVisibleTasksListIsEmpty(){
-        assertThat(listIsEmpty($$(activeTasks)));
+        assertThat(visibleElementsListIsEmpty($$(tasksList)));
     }
 
     public static void assertExistingTasks(String... tasksTexts){
@@ -55,8 +54,9 @@ public class ToDoMVC {
     }
 
     public static void clearCompleted(){
-        $("#clear-completed").click();
-        assertThat(hidden($("#clear-completed")));
+        WebElement element = $("#clear-completed");
+        element.click();
+        assertThat(hidden(element));
     }
 
     public static void assertItemsLeft(Integer counter){

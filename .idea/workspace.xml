@@ -37,7 +37,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/ToDoMVCTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+              <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -45,32 +45,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ToDoMVC.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ToDoMVC.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pages/ToDoMVC.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <state vertical-scroll-proportion="-1.2815789">
+              <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#749#750#0" expanded="true" />
-                <element signature="e#805#806#0" expanded="true" />
-                <element signature="e#872#873#0" expanded="true" />
-                <element signature="e#918#919#0" expanded="true" />
-                <element signature="e#976#977#0" expanded="true" />
-                <element signature="e#1026#1027#0" expanded="true" />
-                <element signature="e#1583#1584#0" expanded="true" />
-                <element signature="e#1666#1667#0" expanded="true" />
-                <element signature="e#1715#1716#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
-                <element signature="e#1834#1835#0" expanded="true" />
-                <element signature="e#1874#1875#0" expanded="true" />
-                <element signature="e#2195#2196#0" expanded="true" />
-                <element signature="e#2240#2241#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-                <element signature="e#2332#2333#0" expanded="true" />
-                <element signature="e#2379#2380#0" expanded="true" />
-                <element signature="e#2430#2431#0" expanded="true" />
+                <element signature="e#681#682#0" expanded="true" />
+                <element signature="e#750#751#0" expanded="true" />
+                <element signature="e#817#818#0" expanded="true" />
+                <element signature="e#863#864#0" expanded="true" />
+                <element signature="e#921#922#0" expanded="true" />
+                <element signature="e#971#972#0" expanded="true" />
+                <element signature="e#1528#1529#0" expanded="true" />
+                <element signature="e#1611#1612#0" expanded="true" />
+                <element signature="e#1660#1661#0" expanded="true" />
+                <element signature="e#1742#1743#0" expanded="true" />
+                <element signature="e#1779#1780#0" expanded="true" />
+                <element signature="e#1819#1820#0" expanded="true" />
+                <element signature="e#2164#2165#0" expanded="true" />
+                <element signature="e#2209#2210#0" expanded="true" />
+                <element signature="e#2253#2254#0" expanded="true" />
+                <element signature="e#2301#2302#0" expanded="true" />
+                <element signature="e#2348#2349#0" expanded="true" />
+                <element signature="e#2399#2400#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Configuration.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/core/Configuration.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.2592592">
+              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,24 +99,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CustomConditions.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CustomConditions.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/core/CustomConditions.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.616798">
-              <caret line="184" column="44" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
-                <element signature="e#4596#4597#0" expanded="true" />
-                <element signature="e#4653#4654#0" expanded="true" />
-                <element signature="e#4693#4694#0" expanded="true" />
-                <element signature="e#4786#4787#0" expanded="true" />
-                <element signature="e#4988#4989#0" expanded="true" />
-                <element signature="e#5049#5050#0" expanded="true" />
-                <element signature="e#5089#5090#0" expanded="true" />
-                <element signature="e#5178#5179#0" expanded="true" />
-                <element signature="e#6551#6552#0" expanded="true" />
-                <element signature="e#6610#6611#0" expanded="true" />
-                <element signature="e#6649#6650#0" expanded="true" />
-                <element signature="e#6736#6737#0" expanded="true" />
+                <element signature="e#3620#3632#0" expanded="true" />
+                <element signature="e#5060#5061#0" expanded="true" />
+                <element signature="e#5117#5118#0" expanded="true" />
+                <element signature="e#5157#5158#0" expanded="true" />
+                <element signature="e#5250#5251#0" expanded="true" />
+                <element signature="e#5811#5812#0" expanded="true" />
+                <element signature="e#5907#5908#0" expanded="true" />
+                <element signature="e#6109#6110#0" expanded="true" />
+                <element signature="e#6170#6171#0" expanded="true" />
+                <element signature="e#6210#6211#0" expanded="true" />
+                <element signature="e#6299#6300#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,8 +125,12 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/core/ConsiseAPI.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="method#assertThat#0;class#ConsiseAPI#0" expanded="false" />
+                <element signature="method#assertThat#1;class#ConsiseAPI#0" expanded="false" />
+                <element signature="method#$#3;class#ConsiseAPI#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,10 +160,10 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/testconfigs/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/ToDoMVCPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/core/ConsiseAPI.java" />
         <option value="$PROJECT_DIR$/src/test/java/ToDoMVCTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/core/CustomConditions.java" />
         <option value="$PROJECT_DIR$/src/main/java/pages/ToDoMVC.java" />
+        <option value="$PROJECT_DIR$/src/main/java/core/ConsiseAPI.java" />
       </list>
     </option>
   </component>
@@ -168,9 +181,9 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-3" />
-    <option name="y" value="1" />
+    <option name="y" value="2" />
     <option name="width" value="1370" />
-    <option name="height" value="743" />
+    <option name="height" value="742" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -340,6 +353,9 @@
       <pane id="PackagesPane" />
     </panes>
   </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/JustForTestSmallThings" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="core" />
@@ -349,7 +365,7 @@
       <recent name="C:\Users\Анечка\temp\ToDoMVCSelenium\src\main\java\core" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ToDoMVCTest.testTasksMainFlow">
+  <component name="RunManager" selected="JUnit.ToDoMVCTest">
     <configuration default="false" name="ToDoMVCTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="ToDoMVCSelenium" />
@@ -698,9 +714,9 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest.testTasksMainFlow" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest.testActivateAllOnCompletedFilter" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest.testTasksMainFlow" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest.testActivateAllOnCompletedFilter" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.ToDoMVCTest.testEditAndSaveByClickingOutside" />
       </list>
     </recent_temporary>
@@ -719,40 +735,40 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 19h 51m 59s.xml">
+    <history-entry file="ToDoMVCTest - 2016.02.08 at 16h 02m 33s.xml">
+      <configuration name="ToDoMVCTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToDoMVCTest - 2016.02.08 at 16h 07m 43s.xml">
+      <configuration name="ToDoMVCTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToDoMVCTest - 2016.02.08 at 16h 26m 17s.xml">
+      <configuration name="ToDoMVCTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToDoMVCTest - 2016.02.08 at 16h 26m 43s.xml">
+      <configuration name="ToDoMVCTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 15h 58m 58s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 19h 53m 44s.xml">
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 15h 59m 53s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 19h 55m 53s.xml">
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 16h 11m 15s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 11m 28s.xml">
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 16h 12m 39s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 12m 19s.xml">
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 16h 14m 14s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 15m 33s.xml">
-      <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 16m 26s.xml">
-      <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 17m 55s.xml">
-      <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 22m 06s.xml">
-      <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.07 at 20h 28m 18s.xml">
+    <history-entry file="ToDoMVCTest_testTasksMainFlow - 2016.02.08 at 16h 24m 10s.xml">
       <configuration name="ToDoMVCTest.testTasksMainFlow" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-3" y="1" width="1370" height="743" extended-state="0" />
-    <editor active="true" />
+    <frame x="-3" y="2" width="1370" height="742" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -761,7 +777,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3295082" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33004925" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24961832" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -821,18 +837,17 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="137" column="48" selection-start-line="137" selection-start-column="48" selection-end-line="137" selection-end-column="67" />
           <folding>
-            <element signature="e#4596#4597#0" expanded="true" />
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="e#4693#4694#0" expanded="true" />
-            <element signature="e#4786#4787#0" expanded="true" />
-            <element signature="e#4988#4989#0" expanded="true" />
-            <element signature="e#5049#5050#0" expanded="true" />
-            <element signature="e#5089#5090#0" expanded="true" />
-            <element signature="e#5178#5179#0" expanded="true" />
-            <element signature="e#6551#6552#0" expanded="true" />
-            <element signature="e#6610#6611#0" expanded="true" />
-            <element signature="e#6649#6650#0" expanded="true" />
-            <element signature="e#6736#6737#0" expanded="true" />
+            <element signature="e#3620#3632#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="e#5157#5158#0" expanded="true" />
+            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#5811#5812#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#6109#6110#0" expanded="true" />
+            <element signature="e#6170#6171#0" expanded="true" />
+            <element signature="e#6210#6211#0" expanded="true" />
+            <element signature="e#6299#6300#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -841,7 +856,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="method#assertThat#0;class#ConsiseAPI#0" expanded="false" />
+            <element signature="method#assertThat#1;class#ConsiseAPI#0" expanded="false" />
+            <element signature="method#$#3;class#ConsiseAPI#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -850,6 +869,34 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/Configuration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.2592592">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/CustomConditions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#3620#3632#0" expanded="true" />
+            <element signature="e#5060#5061#0" expanded="true" />
+            <element signature="e#5117#5118#0" expanded="true" />
+            <element signature="e#5157#5158#0" expanded="true" />
+            <element signature="e#5250#5251#0" expanded="true" />
+            <element signature="e#5811#5812#0" expanded="true" />
+            <element signature="e#5907#5908#0" expanded="true" />
+            <element signature="e#6109#6110#0" expanded="true" />
+            <element signature="e#6170#6171#0" expanded="true" />
+            <element signature="e#6210#6211#0" expanded="true" />
+            <element signature="e#6299#6300#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -865,69 +912,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/ConsiseAPI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ToDoMVCTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <caret line="52" column="18" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/core/ConsiseAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="method#assertThat#0;class#ConsiseAPI#0" expanded="false" />
+            <element signature="method#assertThat#1;class#ConsiseAPI#0" expanded="false" />
+            <element signature="method#$#3;class#ConsiseAPI#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pages/ToDoMVC.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state vertical-scroll-proportion="-1.2815789">
+          <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#749#750#0" expanded="true" />
-            <element signature="e#805#806#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#918#919#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1026#1027#0" expanded="true" />
-            <element signature="e#1583#1584#0" expanded="true" />
-            <element signature="e#1666#1667#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-            <element signature="e#1834#1835#0" expanded="true" />
-            <element signature="e#1874#1875#0" expanded="true" />
-            <element signature="e#2195#2196#0" expanded="true" />
-            <element signature="e#2240#2241#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2332#2333#0" expanded="true" />
-            <element signature="e#2379#2380#0" expanded="true" />
-            <element signature="e#2430#2431#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/core/CustomConditions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.616798">
-          <caret line="184" column="44" selection-start-line="184" selection-start-column="44" selection-end-line="184" selection-end-column="44" />
-          <folding>
-            <element signature="e#4596#4597#0" expanded="true" />
-            <element signature="e#4653#4654#0" expanded="true" />
-            <element signature="e#4693#4694#0" expanded="true" />
-            <element signature="e#4786#4787#0" expanded="true" />
-            <element signature="e#4988#4989#0" expanded="true" />
-            <element signature="e#5049#5050#0" expanded="true" />
-            <element signature="e#5089#5090#0" expanded="true" />
-            <element signature="e#5178#5179#0" expanded="true" />
-            <element signature="e#6551#6552#0" expanded="true" />
-            <element signature="e#6610#6611#0" expanded="true" />
-            <element signature="e#6649#6650#0" expanded="true" />
-            <element signature="e#6736#6737#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#817#818#0" expanded="true" />
+            <element signature="e#863#864#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#971#972#0" expanded="true" />
+            <element signature="e#1528#1529#0" expanded="true" />
+            <element signature="e#1611#1612#0" expanded="true" />
+            <element signature="e#1660#1661#0" expanded="true" />
+            <element signature="e#1742#1743#0" expanded="true" />
+            <element signature="e#1779#1780#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
+            <element signature="e#2164#2165#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
+            <element signature="e#2301#2302#0" expanded="true" />
+            <element signature="e#2348#2349#0" expanded="true" />
+            <element signature="e#2399#2400#0" expanded="true" />
           </folding>
         </state>
       </provider>
