@@ -3,7 +3,6 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 
 import static core.ConsiseAPI.*;
 import static core.CustomConditions.*;
@@ -18,35 +17,34 @@ public class ToDoMVC {
     }
 
     public static void assertVisibleTasks(String... tasksTexts){
-        assertThat(visibleTextsOf($$(tasksList), tasksTexts));
+        assertThat(visibleTextsOf(tasksList, tasksTexts));
     }
 
     public static void assertVisibleTasksListIsEmpty(){
-        assertThat(visibleElementsListIsEmpty($$(tasksList)));
+        assertThat(visibleElementsListIsEmpty(tasksList));
     }
 
     public static void assertExistingTasks(String... tasksTexts){
-        textsOf(tasksList, tasksTexts);
+        assertThat(textsOf(tasksList, tasksTexts));
     }
 
     public static void assertExistingTasksListIsEmpty(){
-        assertThat(isEmpty($$(tasksList)));
+        assertThat(empty(tasksList));
     }
 
     public static WebElement startEdit(String taskText, String newTaskText){
-        Actions action = new Actions(getDriver());
-        action.doubleClick($(listElementWithText($$(tasksList), taskText), "label")).perform();
-        getDriver().findElement(byCss(".editing")).findElement(byCss(".edit")).clear();
-        getDriver().findElement(byCss(".editing")).findElement(byCss(".edit")).sendKeys(newTaskText);
-        return getDriver().findElement(byCss(".editing")).findElement(byCss(".edit"));
+        doubleClick($(listElementWithText(tasksList, taskText), "label"));
+        $(".editing").findElement(byCss(".edit")).clear();
+        $(".editing").findElement(byCss(".edit")).sendKeys(newTaskText);
+        return $(".editing").findElement(byCss(".edit"));
     }
 
     public static void delete(String taskText){
-        $(listElementWithText($$(tasksList), taskText), ".destroy").click();
+        $(listElementWithText(tasksList, taskText), ".destroy").click();
     }
 
     public static void toggle(String taskText){
-        $(listElementWithText($$(tasksList), taskText), ".toggle").click();
+        $(listElementWithText(tasksList, taskText), ".toggle").click();
     }
 
     public static void toggleAll(){
@@ -54,13 +52,12 @@ public class ToDoMVC {
     }
 
     public static void clearCompleted(){
-        WebElement element = $("#clear-completed");
-        element.click();
-        assertThat(hidden(element));
+        $("#clear-completed").click();
+        assertThat(hidden(byCss("#clear-completed")));
     }
 
     public static void assertItemsLeft(Integer counter){
-        assertThat(textOf($("#todo-count>strong"), String.valueOf(counter)));
+        assertThat(textOf(byCss("#todo-count>strong"), String.valueOf(counter)));
     }
 
     public static void openAllFilter(){

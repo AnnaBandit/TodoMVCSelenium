@@ -9,15 +9,18 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static core.ConsiseAPI.$;
 import static core.ConsiseAPI.$$;
 
 public class CustomConditions{
 
-    public static ExpectedCondition<Boolean> textOf(final WebElement element, final String text) {
+    public static ExpectedCondition<Boolean> textOf(final By elementLocator, final String text) {
         return new ExpectedCondition<Boolean>() {
             String actualText;
+            WebElement element;
 
             public Boolean apply(WebDriver driver) {
+                element = $(elementLocator);
                 actualText = element.getText();
                 return actualText.equals(text);
             }
@@ -64,13 +67,15 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<List<WebElement>> visibleTextsOf(final List<WebElement> elements, final String... texts) {
+    public static ExpectedCondition<List<WebElement>> visibleTextsOf(final By elementsLocator, final String... texts) {
         return new ExpectedCondition<List<WebElement>>() {
             private List<WebElement> visibleElements = new ArrayList<WebElement>();
+            private List<WebElement> elements;
             private int listSize;
             private String[] actualTexts;
 
             public List<WebElement> apply(WebDriver driver) {
+                elements = $$(elementsLocator);
 
                 for (WebElement element: elements){
                     if (element.isDisplayed()){
@@ -107,9 +112,12 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<Boolean> isEmpty(final List<WebElement> elements) {
+    public static ExpectedCondition<Boolean> empty(final By elementsLocator) {
         return new ExpectedCondition<Boolean>() {
+            private List<WebElement> elements;
+
             public Boolean apply(WebDriver driver) {
+                elements = $$(elementsLocator);
                 return elements.isEmpty();
             }
 
@@ -119,11 +127,14 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<Boolean> visibleElementsListIsEmpty(final List<WebElement> elements) {
+    public static ExpectedCondition<Boolean> visibleElementsListIsEmpty(final By elementsLocator) {
         return new ExpectedCondition<Boolean>() {
             List<WebElement> visibleList;
+            List<WebElement> elements;
 
             public Boolean apply(WebDriver driver) {
+                elements = $$(elementsLocator);
+
                 for (WebElement element: elements){
                     if (element.isDisplayed()){
                         visibleList.add(element);
@@ -139,9 +150,12 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<Boolean> hidden(final WebElement element) {
+    public static ExpectedCondition<Boolean> hidden(final By elementLocator) {
         return new ExpectedCondition<Boolean>() {
+            private WebElement element;
+
             public Boolean apply(WebDriver driver) {
+                element = driver.findElement(elementLocator);
                 return !element.isDisplayed();
             }
 
@@ -151,10 +165,13 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<WebElement> listElementWithText(final List<WebElement> elements, final String text) {
+    public static ExpectedCondition<WebElement> listElementWithText(final By elementsLocator, final String text) {
         return new ExpectedCondition<WebElement>() {
+            private List<WebElement> elements;
 
             public WebElement apply(WebDriver driver) {
+                elements = $$(elementsLocator);
+
                 for (WebElement element: elements){
                     if (element.getText().equals(text)){
                         return element;
