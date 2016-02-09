@@ -1,6 +1,5 @@
 package testconfigs;
 
-import core.Configuration;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -11,9 +10,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import static core.ConsiseAPI.*;
 
 public class BaseTest {
-    {
-        Configuration.timeout = 10;
-    }
 
     @BeforeClass
     public static void setUp(){
