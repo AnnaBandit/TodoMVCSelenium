@@ -69,25 +69,6 @@ public class CustomConditions{
         };
     }
 
-    public static ExpectedCondition<List<WebElement>> visible(final By elementsLocator) {
-        return new ExpectedCondition<List<WebElement>>() {
-            List<WebElement> elements;
-            List<WebElement> visibleElements;
-
-            public List<WebElement> apply(WebDriver driver) {
-                elements = driver.findElements(elementsLocator);
-
-                for (WebElement element: elements){
-                    if (element.isDisplayed()){
-                        visibleElements.add(element);
-                    }
-                }
-                return visibleElements;
-            }
-
-        };
-    }
-
     public static ExpectedCondition<Boolean> hidden(final By elementLocator) {
         return new ExpectedCondition<Boolean>() {
             private WebElement element;
