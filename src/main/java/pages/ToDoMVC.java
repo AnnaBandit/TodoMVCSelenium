@@ -21,7 +21,7 @@ public class ToDoMVC {
     }
 
     public static void assertVisibleTasksListIsEmpty(){
-        assertThat(visibleElementsListIsEmpty(tasksList));
+        assertThat(sizeOfVisible((tasksList), 0));
     }
 
     public static void assertExistingTasks(String... tasksTexts){
@@ -29,14 +29,12 @@ public class ToDoMVC {
     }
 
     public static void assertExistingTasksListIsEmpty(){
-        assertThat(empty(tasksList));
+        assertThat(sizeOf(tasksList, 0));
     }
 
     public static WebElement startEdit(String taskText, String newTaskText){
         doubleClick($(listElementWithText(tasksList, taskText), "label"));
-        $(".editing").findElement(byCss(".edit")).clear();
-        $(".editing").findElement(byCss(".edit")).sendKeys(newTaskText);
-        return $(".editing").findElement(byCss(".edit"));
+        return setValue($(".editing").findElement(byCss(".edit")), newTaskText);
     }
 
     public static void delete(String taskText){
@@ -53,7 +51,7 @@ public class ToDoMVC {
 
     public static void clearCompleted(){
         $("#clear-completed").click();
-        assertThat(hidden(byCss("#clear-completed")));
+        assertThat(hidden("#clear-completed"));
     }
 
     public static void assertItemsLeft(Integer counter){

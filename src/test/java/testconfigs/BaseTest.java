@@ -4,7 +4,6 @@ import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import static core.ConsiseAPI.*;
@@ -28,10 +27,6 @@ public class BaseTest {
 
     @After
     public void clearData(){
-        if (getDriver() instanceof JavascriptExecutor) {
-            ((JavascriptExecutor) getDriver())
-                    .executeScript("localStorage.clear()");
-        }
+        executeJavaScript("localStorage.clear()");
     }
-
 }

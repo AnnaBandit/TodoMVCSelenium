@@ -1,14 +1,17 @@
 package core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.ArrayList;
 import java.util.List;
 
+import static core.CustomConditions.minimumSizeOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
@@ -44,7 +47,11 @@ public class ConsiseAPI<T> {
     }
 
     public static WebElement $(ExpectedCondition<WebElement> conditionToWaitParentElement, String innerElementCssSelector){
-        return assertThat(conditionToWaitParentElement).findElement(byCss(innerElementCssSelector));
+        return $(conditionToWaitParentElement, byCss(innerElementCssSelector));
+    }
+
+    public static WebElement $(ExpectedCondition<WebElement> conditionToWaitParentElement, By innerElementLocator){
+        return assertThat(conditionToWaitParentElement).findElement(innerElementLocator);
     }
 
     public static List<WebElement> $$(String cssSelector){
@@ -53,6 +60,10 @@ public class ConsiseAPI<T> {
 
     public static List<WebElement> $$(By locator){
         return driver.findElements(locator);
+    }
+
+    public static WebElement get(By listLocator, int index){
+        return assertThat(minimumSizeOf(listLocator, index + 1)).get(index);
     }
 
     public static By byCss(String cssSelector){
@@ -76,4 +87,61 @@ public class ConsiseAPI<T> {
         action.doubleClick(element).perform();
     }
 
+    public static void executeJavaScript(String javaScript){
+        if (getDriver() instanceof JavascriptExecutor) {
+            ((JavascriptExecutor) getDriver())
+                    .executeScript(javaScript);
+        }
+    }
+
+    public static WebElement setValue(WebElement element, String value){
+        element.clear();
+        element.sendKeys(value);
+        return element;
+    }
+
+    public static List<WebElement> visibleElements(List<WebElement> elements){
+        List<WebElement> visibleList = new ArrayList<WebElement>();
+
+        for (WebElement element: elements){
+            if (element.isDisplayed()){
+                visibleList.add(element);
+            }
+        }
+
+        return visibleList;
+    }
+
+    public static List<WebElement> compareTexts(List<WebElement> elements, String... expectedTexts){
+        int listSize = elements.size();
+        String[] actualTexts = new String[listSize];
+
+        for (int i = 0; i < listSize; i++) {
+            actualTexts[i]=(elements.get(i).getText());
+        }
+
+        if (listSize!=expectedTexts.length){
+            return null;
+        }
+
+        else {
+            for (int i = 0; i < listSize; i++) {
+                String actualText = actualTexts[i];
+                if (!actualText.contains(expectedTexts[i])) {
+                    return null;
+                }
+            }
+            return elements;
+        }
+    }
+
+    public static String[] getTexts (List<WebElement> elements){
+        String[]texts = new String[elements.size()];
+        for (int i=0;i<elements.size();i++){
+            texts[i]=elements.get(i).getText();
+        }
+        return texts;
+    }
 }
+
+
