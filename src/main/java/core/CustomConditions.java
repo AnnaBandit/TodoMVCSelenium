@@ -40,7 +40,7 @@ public class CustomConditions{
                 elements = driver.findElements(elementsLocator);
                 actualTexts = getTexts(elements);
 
-                return compareTexts(elements, texts);
+                return hasTexts(elements, texts);
             }
 
             public String toString(){
@@ -57,10 +57,10 @@ public class CustomConditions{
 
             public List<WebElement> apply(WebDriver driver) {
                 elements = driver.findElements(elementsLocator);
-                visibleElements = visibleElements(elements);
+                visibleElements = filteredByVisible(elements);
                 actualTexts = getTexts(visibleElements);
 
-                return compareTexts(visibleElements, texts);
+                return hasTexts(visibleElements, texts);
             }
 
             public String toString(){
@@ -161,7 +161,7 @@ public class CustomConditions{
             private int size;
 
             public List<WebElement>  apply(WebDriver driver) {
-                elements = visibleElements(driver.findElements(elementsLocator));
+                elements = filteredByVisible(driver.findElements(elementsLocator));
                 size = elements.size();
                 return size == expectedSize ? elements : null;
             }

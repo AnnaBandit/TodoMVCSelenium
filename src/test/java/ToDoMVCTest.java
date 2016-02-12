@@ -78,5 +78,4 @@ public class ToDoMVCTest extends BaseTest {
         delete("2-edited");
         assertExistingTasksListIsEmpty();
     }
-
 }

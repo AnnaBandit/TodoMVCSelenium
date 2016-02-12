@@ -54,6 +54,14 @@ public class ConsiseAPI<T> {
         return assertThat(conditionToWaitParentElement).findElement(innerElementLocator);
     }
 
+    public static WebElement $(String idOfParentElement, String... classesOfInnerElements){
+        WebElement element = driver.findElement(By.id(idOfParentElement));
+        for(int i=0;i<classesOfInnerElements.length;i++){
+            element = element.findElement(byCss(classesOfInnerElements[i]));
+        }
+        return element;
+    }
+
     public static List<WebElement> $$(String cssSelector){
         return $$(byCss(cssSelector));
     }
@@ -100,7 +108,7 @@ public class ConsiseAPI<T> {
         return element;
     }
 
-    public static List<WebElement> visibleElements(List<WebElement> elements){
+    public static List<WebElement> filteredByVisible(List<WebElement> elements){
         List<WebElement> visibleList = new ArrayList<WebElement>();
 
         for (WebElement element: elements){
@@ -112,7 +120,7 @@ public class ConsiseAPI<T> {
         return visibleList;
     }
 
-    public static List<WebElement> compareTexts(List<WebElement> elements, String... expectedTexts){
+    public static List<WebElement> hasTexts(List<WebElement> elements, String... expectedTexts){
         int listSize = elements.size();
         String[] actualTexts = new String[listSize];
 
