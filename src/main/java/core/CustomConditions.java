@@ -1,6 +1,7 @@
 package core;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -168,6 +169,50 @@ public class CustomConditions{
             public String toString() {
                 return String.format("Actual List size is %s. Expected size: %s", size, expectedSize);
             }
+        };
+    }
+
+    public static ExpectedCondition <WebElement> elementInList(final By elementsLocator, final By elementLocator) {
+        return new ExpectedCondition <WebElement> () {
+            private List<WebElement> elements;
+
+            public WebElement apply(WebDriver driver) {
+                elements = driver.findElements(elementsLocator);
+
+                try {
+                    for (WebElement element: elements) {
+                        return element.findElement(elementLocator);
+                    }
+                } catch (NoSuchElementException ex) {
+                    return null;
+                }
+                return null;
+            }
+
+            public String toString() {
+                return String.format("There is no element with %s locator in the list %s", elementLocator, elements);
+            }
+        };
+    }
+
+    public static ExpectedCondition<WebElement> listElementWithCssClass (final By elementsLocator, final String cssClass) {
+        return new ExpectedCondition<WebElement>() {
+            private List<WebElement> elements;
+
+            public WebElement apply(WebDriver driver) {
+                elements = driver.findElements(elementsLocator);
+
+                for (WebElement element: elements){
+                    if (element.getAttribute("class").contains(cssClass)){
+                        return element;
+                    }
+                }
+                return null;
+            }
+
+            public  String toString(){
+                return String.format("There are no elements have cssClass %s in the list %s", cssClass, elements);
+            };
         };
     }
 }

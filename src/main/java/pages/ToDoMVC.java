@@ -34,7 +34,7 @@ public class ToDoMVC {
 
     public static WebElement startEdit(String taskText, String newTaskText){
         doubleClick($(listElementWithText(tasksList, taskText), "label"));
-        return setValue($(".editing").findElement(byCss(".edit")), newTaskText);
+        return setValue($(listElementWithCssClass(tasksList, "editing"), ".edit"), newTaskText);
     }
 
     public static void delete(String taskText){

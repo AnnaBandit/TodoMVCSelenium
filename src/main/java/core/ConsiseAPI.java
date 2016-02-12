@@ -135,7 +135,7 @@ public class ConsiseAPI<T> {
         }
     }
 
-    public static String[] getTexts (List<WebElement> elements){
+    public static String[] getTexts(List<WebElement> elements){
         String[]texts = new String[elements.size()];
         for (int i=0;i<elements.size();i++){
             texts[i]=elements.get(i).getText();
