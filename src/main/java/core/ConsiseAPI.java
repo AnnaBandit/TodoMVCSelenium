@@ -15,7 +15,7 @@ import static core.CustomConditions.minimumSizeOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
-public class ConsiseAPI<T> {
+public class ConsiseAPI {
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
@@ -54,12 +54,16 @@ public class ConsiseAPI<T> {
         return assertThat(conditionToWaitParentElement).findElement(innerElementLocator);
     }
 
-    public static WebElement $(String idOfParentElement, String... classesOfInnerElements){
-        WebElement element = driver.findElement(By.id(idOfParentElement));
+    public static WebElement $(By locatorOfParentElement, String... classesOfInnerElements){
+        WebElement element = $(locatorOfParentElement);
         for(int i=0;i<classesOfInnerElements.length;i++){
             element = element.findElement(byCss(classesOfInnerElements[i]));
         }
         return element;
+    }
+
+    public static WebElement $(String cssSelectorOfParentElement, String... classesOfInnerElements){
+        return $(byCss(cssSelectorOfParentElement), classesOfInnerElements);
     }
 
     public static List<WebElement> $$(String cssSelector){
@@ -120,27 +124,21 @@ public class ConsiseAPI<T> {
         return visibleList;
     }
 
-    public static List<WebElement> hasTexts(List<WebElement> elements, String... expectedTexts){
+    public static boolean hasTexts(List<WebElement> elements, String... expectedTexts){
         int listSize = elements.size();
-        String[] actualTexts = new String[listSize];
-
-        for (int i = 0; i < listSize; i++) {
-            actualTexts[i]=(elements.get(i).getText());
-        }
+        String[] actualTexts = getTexts(elements);
 
         if (listSize!=expectedTexts.length){
-            return null;
+            return false;
         }
 
-        else {
-            for (int i = 0; i < listSize; i++) {
-                String actualText = actualTexts[i];
-                if (!actualText.contains(expectedTexts[i])) {
-                    return null;
-                }
+        for (int i = 0; i < listSize; i++) {
+            String actualText = actualTexts[i];
+            if (!actualText.contains(expectedTexts[i])) {
+                return false;
             }
-            return elements;
         }
+        return true;
     }
 
     public static String[] getTexts(List<WebElement> elements){

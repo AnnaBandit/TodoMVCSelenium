@@ -29,7 +29,7 @@ public class ToDoMVC {
     }
 
     public static void assertExistingTasksListIsEmpty(){
-        assertThat(sizeOf(tasksList, 0));
+        assertThat(empty(tasksList));
     }
 
     public static WebElement startEdit(String taskText, String newTaskText){
