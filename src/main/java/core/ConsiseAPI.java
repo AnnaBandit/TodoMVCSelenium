@@ -54,10 +54,10 @@ public class ConsiseAPI {
         return assertThat(conditionToWaitParentElement).findElement(innerElementLocator);
     }
 
-    public static WebElement $(By locatorOfParentElement, String... classesOfInnerElements){
+    public static WebElement $(By locatorOfParentElement, String... selecorsOfInnerElements){
         WebElement element = $(locatorOfParentElement);
-        for(int i=0;i<classesOfInnerElements.length;i++){
-            element = element.findElement(byCss(classesOfInnerElements[i]));
+        for(int i=0;i<selecorsOfInnerElements.length;i++){
+            element = element.findElement(byCss(selecorsOfInnerElements[i]));
         }
         return element;
     }
