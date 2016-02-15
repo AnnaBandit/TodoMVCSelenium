@@ -54,16 +54,16 @@ public class ConsiseAPI {
         return assertThat(conditionToWaitParentElement).findElement(innerElementLocator);
     }
 
-    public static WebElement $(By locatorOfParentElement, String... selectorsOfInnerElements){
+    public static WebElement $(By locatorOfParentElement, String... cssSelectorsOfInnerElements){
         WebElement element = $(locatorOfParentElement);
-        for(int i=0;i<selectorsOfInnerElements.length;i++){
-            element = element.findElement(byCss(selectorsOfInnerElements[i]));
+        for(int i=0;i<cssSelectorsOfInnerElements.length;i++){
+            element = element.findElement(byCss(cssSelectorsOfInnerElements[i]));
         }
         return element;
     }
 
-    public static WebElement $(String cssSelectorOfParentElement, String... selectorsOfInnerElements){
-        return $(byCss(cssSelectorOfParentElement), selectorsOfInnerElements);
+    public static WebElement $(String cssSelectorOfParentElement, String... cssSelectorsOfInnerElements){
+        return $(byCss(cssSelectorOfParentElement), cssSelectorsOfInnerElements);
     }
 
     public static List<WebElement> $$(String cssSelector){
