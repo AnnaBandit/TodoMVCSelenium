@@ -12,21 +12,22 @@ public class BaseTest {
 
     @BeforeClass
     public static void setUp(){
-        setDriver(new FirefoxDriver());
+
     }
 
     @AfterClass
     public static void tearDown(){
-        getDriver().quit();
     }
 
     @Before
     public void openApp(){
+        setDriver(new FirefoxDriver());
         open("https://todomvc4tasj.herokuapp.com/");
     }
 
     @After
     public void clearData(){
         executeJavaScript("localStorage.clear()");
+        getDriver().quit();
     }
 }

@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 import static core.CustomConditions.minimumSizeOf;
@@ -16,18 +17,18 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class ConsiseAPI {
-    private static WebDriver driver;
+    static HashMap<Thread, WebDriver> drivers = new HashMap<Thread, WebDriver>();
 
     public static WebDriver getDriver() {
-        return driver;
+        return drivers.get(Thread.currentThread());
     }
 
     public static void setDriver(WebDriver driver) {
-        ConsiseAPI.driver = driver;
+        drivers.put(Thread.currentThread(), driver);
     }
 
     public static <V> V assertThat(ExpectedCondition<V> condition, int timeout){
-        return new WebDriverWait(driver, timeout).until(condition);
+        return new WebDriverWait(getDriver(), timeout).until(condition);
     }
 
     public static <V> V assertThat(ExpectedCondition<V> condition){
@@ -71,7 +72,7 @@ public class ConsiseAPI {
     }
 
     public static List<WebElement> $$(By locator){
-        return driver.findElements(locator);
+        return getDriver().findElements(locator);
     }
 
     public static WebElement get(By listLocator, int index){
@@ -87,15 +88,15 @@ public class ConsiseAPI {
     }
 
     public static void open(String url){
-        driver.get(url);
+        getDriver().get(url);
     }
 
     public static String title(){
-        return driver.getTitle();
+        return getDriver().getTitle();
     }
 
     public static void doubleClick(WebElement element){
-        Actions action = new Actions(driver);
+        Actions action = new Actions(getDriver());
         action.doubleClick(element).perform();
     }
 
