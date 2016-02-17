@@ -17,14 +17,14 @@ import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOf;
 import static org.openqa.selenium.support.ui.ExpectedConditions.visibilityOfElementLocated;
 
 public class ConsiseAPI {
-    static HashMap<Thread, WebDriver> drivers = new HashMap<Thread, WebDriver>();
+    static HashMap<Integer, WebDriver> drivers = new HashMap<Integer, WebDriver>();
 
     public static WebDriver getDriver() {
-        return drivers.get(Thread.currentThread());
+        return drivers.get(Thread.currentThread().hashCode());
     }
 
     public static void setDriver(WebDriver driver) {
-        drivers.put(Thread.currentThread(), driver);
+        drivers.put(Thread.currentThread().hashCode(), driver);
     }
 
     public static <V> V assertThat(ExpectedCondition<V> condition, int timeout){

@@ -1,11 +1,11 @@
 import org.junit.Test;
 import org.openqa.selenium.Keys;
-import testconfigs.BaseTest;
+import testconfigs.AtTodoMVCPageTest;
 
 import static pages.ToDoMVC.*;
 
 
-public class ToDoMVCTest extends BaseTest {
+public class ToDoMVCTest extends AtTodoMVCPageTest {
 
     @Test
     public void testDeleteWhileEditing(){

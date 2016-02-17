@@ -110,7 +110,7 @@ public class CustomConditions{
             }
 
             public  String toString(){
-                return String.format("There are no elements with text \"%s\" in the list found by \"%s\" locator", text, elementsLocator);
+                return String.format("There are no elements with text \"%s\" in the list found by \"%s\"", text, elementsLocator);
             };
         });
     }
